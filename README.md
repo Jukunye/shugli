@@ -23,6 +23,30 @@ Growing companies drown in two parrallel messes.
 
 Off-the-shelf solutions (Retool, BambooHR, Workday, Salesforce) are rigid, expensive, siloed and force the company to adapt to their workflow instead of the reverse.
 
+### The solution
+
+A single, modular internal platform that unifies:
+
+1. Backoffice
+   - User/role management
+   - Dynamic data grids
+   - CRUD for business entities
+   - Audit logging
+2. HRIS
+   - Employee directory
+   - Org chart
+   - Leave management
+   - Documents
+   - Approval workflows
+3. Shared foundation
+   - Authentication
+   - RBAC
+   - Audit engine
+   - Notifications
+   - File storage
+
+One codebase. One login. One audit trail. One source of truth.
+
 ## MVP - Foundation & First Value
 
 Goal: ship a working, secure internal platform that replaces at least one painful manual process.
