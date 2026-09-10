@@ -2,6 +2,10 @@
 
 Unified Internal Operations Platform (Backoffice + HRIS)
 
+> **Project status:** Early development. Nothing here is stable yet —
+> schema, APIs, and UI are all subject to change. Not accepting external
+> contributions or deployments at this time.
+
 ## Executive Summary
 
 ### The problem
