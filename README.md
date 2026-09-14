@@ -6,39 +6,51 @@ Unified Internal Operations Platform (Backoffice + HRIS)
 > schema, APIs, and UI are all subject to change. Not accepting external
 > contributions or deployments at this time.
 
+**Shugli platform** · **Marketing** (this repo) · [App](https://github.com/Jukunye/shugli-app) · [API](https://github.com/Jukunye/shugli-api)
+
+---
+
+This repository contains the **public marketing site and landing page** for Shugli.
+
+| Repository                                          | Purpose                                         |
+| :-------------------------------------------------- | :---------------------------------------------- |
+| **shugli** (this repo)                              | Marketing site, landing page, public docs       |
+| [shugli-app](https://github.com/Jukunye/shugli-app) | Internal web application (Backoffice + HRIS UI) |
+| [shugli-api](https://github.com/Jukunye/shugli-api) | Backend API, auth, RBAC, audit engine           |
+
 ## Executive Summary
 
 ### The problem
 
-Growing companies drown in two parrallel messes.
+Growing companies drown in two parallel messes.
 
-1. Backoffice chaos
-   - Non-technical staff writting SQL
+1. **Backoffice chaos**
+   - Non-technical staff writing SQL
    - Scattered admin tools
    - No unified audit trail
-2. HR sprawl
+2. **HR sprawl**
    - Employee data in spreadsheets
    - Leave tracked in email
    - Payroll reconciled manually
 
-Off-the-shelf solutions (Retool, BambooHR, Workday, Salesforce) are rigid, expensive, siloed and force the company to adapt to their workflow instead of the reverse.
+Off-the-shelf solutions (Retool, BambooHR, Workday, Salesforce) are rigid, expensive, siloed, and force the company to adapt to their workflow instead of the reverse.
 
 ### The solution
 
 A single, modular internal platform that unifies:
 
-1. Backoffice
+1. **Backoffice**
    - User/role management
    - Dynamic data grids
    - CRUD for business entities
    - Audit logging
-2. HRIS
+2. **HRIS**
    - Employee directory
    - Org chart
    - Leave management
    - Documents
    - Approval workflows
-3. Shared foundation
+3. **Shared foundation**
    - Authentication
    - RBAC
    - Audit engine
@@ -47,15 +59,15 @@ A single, modular internal platform that unifies:
 
 One codebase. One login. One audit trail. One source of truth.
 
-## MVP - Foundation & First Value
+## MVP — Foundation & First Value
 
-Goal: ship a working, secure internal platform that replaces at least one painful manual process.
+**Goal:** ship a working, secure internal platform that replaces at least one painful manual process.
 
 | Domain                  | Added                                                                                                                      |
 | :---------------------- | :------------------------------------------------------------------------------------------------------------------------- |
 | **Auth & RBAC**         | Login/logout, session management, forgot-password, roles, permissions, permissions middleware on every request.            |
 | **Admin shell**         | Main layout with sidebar/header, dynamic navigation driven by the user's permissions.                                      |
-| **Universal Data Grid** | Reusable, config-driven grid: server-side pagination, sorting, filtering, inline edit, bulk actions                        |
+| **Universal Data Grid** | Reusable, config-driven grid: server-side pagination, sorting, filtering, inline edit, bulk actions.                       |
 | **Entity CRUD**         | Dynamic forms (create/edit/delete) with client + server validation, applied to 3 entities only: users, employee, customer. |
 | **Audit log**           | Automatic interception of all mutations. who/what/when/before/after.                                                       |
 | **Employee Directory**  | Profiles, departments, positions, manager hierarchy, profile photo upload.                                                 |
@@ -63,4 +75,12 @@ Goal: ship a working, secure internal platform that replaces at least one painfu
 
 **Out of scope for MVP:** Payroll, leave, org chart visualization, workflows, dashboards.
 
-**Definition of Done:** A non-technical user can log in, add an employee, edit a customer, upload a contract and an admin can see change in the audit log - all without a developer touching SQL.
+**Definition of Done:** A non-technical user can log in, add an employee, edit a customer, upload a contract, and an admin can see the change in the audit log — all without a developer touching SQL.
+
+## Repository layout
+
+| Repo                                                  | Role                | Stack                                              |
+| :---------------------------------------------------- | :------------------ | :------------------------------------------------- |
+| `shugli`                                              | Marketing / landing | Static HTML, Tailwind CSS, GSAP, Lenis, Vanilla TS |
+| [`shugli-app`](https://github.com/Jukunye/shugli-app) | Web application     | React, TypeScript, Vite                            |
+| [`shugli-api`](https://github.com/Jukunye/shugli-api) | Backend API         | FastAPI                                            |
